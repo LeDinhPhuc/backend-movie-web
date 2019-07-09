@@ -163,8 +163,8 @@
   - *Header:*
 	
 	  | Field        | Type   | Require | Note                 |
-  | ------------ | ------ | ------- | -------------------- |
-  | access-token | String | Require | Token của người dùng |
+      | ------------ | ------ | ------- | -------------------- |
+      | access-token | String | Require | Token của người dùng |
   
 - **Response**:
 
