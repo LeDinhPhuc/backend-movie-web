@@ -14,6 +14,7 @@
 | records | Number | Option  | Số bản ghi trên một trang<br />**Default value**: records = 18 |
 
 - **Response:**
+
 | Field | Type | Require | Note |
 |----|----|----|----|
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
