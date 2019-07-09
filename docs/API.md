@@ -136,8 +136,8 @@
   - *Path:* api/films
   - *Body*: JSON
   
-  | Field | Type   | Require | Note              |
-  | ----- | ------ | ------- | ----------------- |
+| Field | Type   | Require | Note              |
+| ----- | ------ | ------- | ----------------- |
 	| title                | Object       | Require  | Tiêu đề phim<br />Ví dụ:<br />{title_en: "Catain America"<br />title_vn: "Đội trưởng Mỹ"} |
 | supported_resolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
 | dateReleased         | Date         | Option | Ngày phát hành                                               |
@@ -160,7 +160,7 @@
   
   - *Header:*
   
-  | Field        | Type   | Require | Note                 |
+    | Field        | Type   | Require | Note                 |
 	| ------------ | ------ | ------- | -------------------- |
 	| access-token | String | Require | Token của người dùng |
   
