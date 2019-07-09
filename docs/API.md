@@ -277,20 +277,24 @@
   - *Path:* api/films/filter?arrange=&category=&country=&type=&year=
   - *Params*:
   
+  Param gồm các tham số:
+  
+  | Field   | Type   | Require | Note                                                      |
+  | ------- | ------ | ------- | --------------------------------------------------------- |
+  | filter  | Object | Option  | Các filter, các key của object được mô tả trong bảng dưới |
+  | page    | Number | Option  | Số trang                                                  |
+  | records | Number | Option  | Số bản ghi cho một trang                                  |
+  
+  Các key của Object filter:
+
   | Field    | Type   | Require | Note                                                         |
   | -------- | ------ | ------- | ------------------------------------------------------------ |
-  | arrange  | Number | Option  | Sắp xếp kết quả tìm kiếm theo:<br />0: Mới cập nhật<br />1: Năm xuất bản<br />2: Tên phim<br />3: IMBd |
   | category | String | Option  | Lọc theo danh mục                                            |
+  | arrange  | Number | Option  | Sắp xếp kết quả tìm kiếm theo:<br />0: Mới cập nhật<br />1: Năm xuất bản<br />2: Tên phim<br />3: IMBd |
   | country  | String | Option  | Lọc theo quốc gia                                            |
   | type     | String | Option  | Lọc theo thể loại                                            |
   | year     | Number | Option  | Lọc theo năm phát hành                                       |
 
-
-  - *Body:* JSON
-
-| Field | Type  | Require | Note               |
-| ----- | ----- | ------- | ------------------ |
-| links | Array | Require | Mảng các link phim |
 
 - **Response**:
 
