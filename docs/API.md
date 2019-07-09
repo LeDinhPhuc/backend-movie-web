@@ -139,11 +139,12 @@
     | Field | Type   | Require | Note              |
     | ----- | ------ | ------- | ----------------- |
     | title                | Object       | Require  | Tiêu đề phim<br />Ví dụ:<br />{title_en: "Catain America"<br />title_vn: "Đội trưởng Mỹ"} |
-    | supported_resolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
+    | supportedResolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
     | dateReleased         | Date         | Option | Ngày phát hành                                               |
     | dateCreated          | Date         | Option | Ngày tạo<br />**Default value**: Date.now()                  |
     | dateUpdated          | Date         | Option | Ngày cập nhật phim<br />**Default value**: Date.now()        |
     | category             | Array        | Require  | Mảng id các category                                         |
+    | country | String | Option | Quốc gia |
     | time                 | Number       | Option | Thời lượng                                                   |
     | episodeNumber        | Number       | Require  | Số tập phim, nếu là phim lẻ thì có giá trị 1                 |
     | imdb                 | Number       | Option | Số imdb của phim                                             |
@@ -155,14 +156,15 @@
     | thumb                | String       | Require  | Link ảnh nhỏ khi hiển thị danh sách các phim                 |
     | type                 | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
     | links                | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
-    | rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating |
-    | views                | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
-
-  - *Header:*
+    | rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating<br />Ví dụ:<br />{ratingNumber: 4.3,<br />ratingId: 3hjuhuh23uhu23} |
+  | views                | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
+    | tags | Array | Require | Tags |
   
-    | Field        | Type   | Require | Note                 |
-	| ------------ | ------ | ------- | -------------------- |
-	| access-token | String | Require | Token của người dùng |
+  - *Header:*
+	
+	  | Field        | Type   | Require | Note                 |
+  | ------------ | ------ | ------- | -------------------- |
+  | access-token | String | Require | Token của người dùng |
   
 - **Response**:
 
@@ -186,11 +188,12 @@
 | Field | Type   | Require | Note              |
 | ----- | ------ | ------- | ----------------- |
 | title                | Object       | Require  | Tiêu đề phim<br />Ví dụ:<br />{title_en: "Catain America"<br />title_vn: "Đội trưởng Mỹ"} |
-| supported_resolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
+| supportedResolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
 | dateReleased         | Date         | Option | Ngày phát hành                                               |
 | dateCreated          | Date         | Option | Ngày tạo<br />**Default value**: Date.now()                  |
 | dateUpdated          | Date         | Option | Ngày cập nhật phim<br />**Default value**: Date.now()        |
 | category             | Array        | Require  | Mảng id các category                                         |
+| country | String | Option | Quốc gia |
 | time                 | Number       | Option | Thời lượng                                                   |
 | episodeNumber        | Number       | Require  | Số tập phim, nếu là phim lẻ thì có giá trị 1                 |
 | imdb                 | Number       | Option | Số imdb của phim                                             |
@@ -202,8 +205,9 @@
 | thumb                | String       | Require  | Link ảnh nhỏ khi hiển thị danh sách các phim                 |
 | type                 | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
 | links                | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
-| rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating |
+| rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating<br />Ví dụ:<br />{ratingNumber: 4.3,<br />ratingId: 3hjuhuh23uhu23} |
 | views                | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
+| tags | Array | Require | tags |
 
 	- *Header:*
 

@@ -23,7 +23,7 @@
 | type                | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
 | links               | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
 | rating              | Object       | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating<br />Ví dụ:<br />{ratingNumber: 4.3,<br />ratingId: 3hjuhuh23uhu23} |
-| views               | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)                    |
+| views               | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
 | tags                | Array        | Require  | tags                                                         |
 
 # 2. user
