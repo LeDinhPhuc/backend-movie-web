@@ -19,6 +19,7 @@
 |----|----|----|----|
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 | films | Array | **Option** | Danh sách các phim trả về |
+
 ## 1.2. Lấy phim theo category
 - **Request:**
   - *Method:* GET
@@ -164,6 +165,7 @@
 	| access-token | String | Require | Token của người dùng |
   
 - **Response**:
+
     | Field | Type | Require | Note |
     |----|----|----|----|
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
@@ -173,6 +175,7 @@
   - *Method:* PATCH
   - *Path:* api/films?id=x
   - *Param*:
+
   | Field | Type   | Require | Note                      |
   | ----- | ------ | ------- | ------------------------- |
   | id    | String | Require | ID phim cần sửa thông tin |
@@ -285,6 +288,7 @@
 | access-token | String | Require | Token của người dùng |
 
 - **Response:**
+
 | Field | Type | Require | Note |
 |----|----|----|----|
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
@@ -295,7 +299,7 @@
 
 - **Request:**
   - *Method:* GET
-  - *Path:* api/users/current
+  - *Path:* api/users/me
   - *Header:*
 
 | Field        | Type   | Require | Note                 |
@@ -303,6 +307,7 @@
 | access-token | String | Require | Token của người dùng |
 
 - **Response:**
+
 | Field | Type | Require | Note |
 |----|----|----|----|
 | error | Object | true | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
@@ -342,6 +347,7 @@
 | access-token | String | Require | Token của người dùng |
 
 - **Response:**
+
 | Field | Type   | Require | Note                                                         |
 | ----- | ------ | ------- | ------------------------------------------------------------ |
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
@@ -365,6 +371,7 @@
   | id    | String | Require | ID của người dùng |
 
 - **Response:**
+
     | Field | Type   | Require | Note                                                         |
     | ----- | ------ | ------- | ------------------------------------------------------------ |
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
@@ -430,6 +437,7 @@
 | access-token | String | Option  | Token người dùng |
 
 - **Response:**
+
 | Field      | Type   | Require | Note                                                         |
 | ---------- | ------ | ------- | ------------------------------------------------------------ |
 | error      | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
@@ -441,6 +449,7 @@
   - *Method:* POST
   - *Path:* api/categories
   - *Header*:
+  
   | Field        | Type   | Require | Note             |
   | ------------ | ------ | ------- | ---------------- |
   | access-token | String | Option  | Token người dùng |
@@ -464,6 +473,7 @@
   - *Method:* PATCH
   - *Path:* api/categories/id=?
   - *Header*:
+  
   | Field        | Type   | Require | Note             |
   | ------------ | ------ | ------- | ---------------- |
   | access-token | String | Option  | Token người dùng |
@@ -493,6 +503,7 @@
   - *Method:* PATCH
   - *Path:* api/categories/id=?
   - *Header*:
+  
   | Field        | Type   | Require | Note             |
   | ------------ | ------ | ------- | ---------------- |
   | access-token | String | Option  | Token người dùng |
@@ -528,6 +539,7 @@
   - *Method:* POST
   - *Path:* api/sliders
   - *Header*:
+  
   | Field        | Type   | Require | Note             |
   | ------------ | ------ | ------- | ---------------- |
   | access-token | String | Option  | Token người dùng |
@@ -551,6 +563,7 @@
   - *Method:* PATCH
   - *Path:* api/sliders/id=?
   - *Header*:
+  
   | Field        | Type   | Require | Note             |
   | ------------ | ------ | ------- | ---------------- |
   | access-token | String | Option  | Token người dùng |
@@ -579,6 +592,7 @@
   - *Method:* DELETE
   - *Path:* api/sliders?id=x
   - *Header*:
+  
   | Field        | Type   | Require | Note             |
   | ------------ | ------ | ------- | ---------------- |
   | access-token | String | Option  | Token người dùng |
@@ -609,6 +623,7 @@
 | Field        | Type   | Require | Note                 |
 | ------------ | ------ | ------- | -------------------- |
 | access-token | String | Require | Token của người dùng |
+
 - **Response:**
 
 | Field   | Type   | Require | Note                                                         |
@@ -621,6 +636,7 @@
   - *Method:* GET
   - *Path:* /api/configs?key=x
   - *Param*:
+  
   | Field | Type   | Require | Note |
   | ----- | ------ | ------- | ---- |
   | key   | String | Require | Key  |
@@ -631,6 +647,7 @@
   | Field        | Type   | Require | Note                 |
   | ------------ | ------ | ------- | -------------------- |
   | access-token | String | Option  | Token của người dùng |
+
 - **Response:**
 
     | Field   | Type   | Require | Note                                                         |
@@ -643,6 +660,7 @@
   - *Method:* POST
   - *Path:* /api/configs
   - *Body*:
+
   | Field  | Type   | Require | Note   |
   | ------ | ------ | ------- | ------ |
   | key    | String | Require | Key    |
@@ -653,6 +671,7 @@
   | Field      | Type   | Require | Note                 |
   | ---------- | ------ | ------- | -------------------- |
   | session_id | String | Require | Token của người dùng |
+
 - **Response:**
 
     | Field | Type   | Require | Note                                                         |
@@ -665,6 +684,7 @@
   - *Method:* PATCH
   - *Path:* /api/configs?id=?
   - *Param*:
+  
   | Field | Type   | Require | Note                   |
   | ----- | ------ | ------- | ---------------------- |
   | id    | String | Require | ID của config muốn sửa |
@@ -682,6 +702,7 @@
   | ------ | ------ | ------- | ------ |
   | key    | String | Require | key    |
   | values | String | Require | values |
+
 - **Response:**
 
     | Field | Type   | Require | Note                                                         |
@@ -693,6 +714,7 @@
   - *Method:* DELETE
   - *Path:* /api/configs?id=?
   - *Param*:
+
   | Field | Type   | Require | Note                   |
   | ----- | ------ | ------- | ---------------------- |
   | id    | String | Require | ID của config muốn sửa |
