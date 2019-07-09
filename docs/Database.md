@@ -8,7 +8,7 @@
 | dateReleased        | Date         | Option   | Ngày phát hành                                               |
 | dateCreated         | Date         | Option   | Ngày tạo<br />**Default value**: Date.now()                  |
 | dateUpdated         | Date         | Option   | Ngày cập nhật phim<br />**Default value**: Date.now()        |
-| category            | Array        | Require  | Mảng các category mà phim này thuộc                          |
+| category            | Array        | Require  | Mảng các category (danh mục) mà phim này thuộc<br />Ví dụ: ["Phim chiếu rạp", "Phim đề cử", "Phim sắp chiếu"] |
 | country             | String       | Option   | Quốc gia                                                     |
 | time                | Number       | Option   | Thời lượng                                                   |
 | episodeNumber       | Number       | Require  | Số tập phim, nếu là phim lẻ thì có giá trị 1                 |
@@ -20,7 +20,7 @@
 | trailer             | String       | Option   | Link trailer của phim                                        |
 | image               | String       | Require  | Link ảnh lớn hiển thị khi xem chi tiết phim                  |
 | thumb               | String       | Require  | Link ảnh nhỏ khi hiển thị danh sách các phim                 |
-| type                | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
+| type                | Array        | Require  | Mảng các thể loại mà phim thuộc<br />Ví dụ: ["Hành động", "Tâm lý", "Tình cảm"] |
 | links               | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
 | rating              | Object       | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating<br />Ví dụ:<br />{ratingNumber: 4.3,<br />ratingId: 3hjuhuh23uhu23} |
 | views               | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |

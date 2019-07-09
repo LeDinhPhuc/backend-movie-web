@@ -143,7 +143,7 @@
     | dateReleased         | Date         | Option | Ngày phát hành                                               |
     | dateCreated          | Date         | Option | Ngày tạo<br />**Default value**: Date.now()                  |
     | dateUpdated          | Date         | Option | Ngày cập nhật phim<br />**Default value**: Date.now()        |
-    | category             | Array        | Require  | Mảng id các category                                         |
+    | category             | Array        | Require  | Mảng các category (danh mục) mà phim này thuộc<br />Ví dụ: ["Phim chiếu rạp", "Phim đề cử", "Phim sắp chiếu"] |
     | country | String | Option | Quốc gia |
     | time                 | Number       | Option | Thời lượng                                                   |
     | episodeNumber        | Number       | Require  | Số tập phim, nếu là phim lẻ thì có giá trị 1                 |
@@ -154,7 +154,7 @@
     | content              | String       | Require  | Tóm tắt nội dung phim                                        |
     | image                | String       | Require  | Link ảnh lớn hiển thị khi xem chi tiết phim                  |
     | thumb                | String       | Require  | Link ảnh nhỏ khi hiển thị danh sách các phim                 |
-    | type                 | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
+    | type                 | Array | Require  | Mảng các thể loại mà phim thuộc<br />Ví dụ: ["Hành động", "Tâm lý", "Tình cảm"] |
     | links                | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
     | rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating<br />Ví dụ:<br />{ratingNumber: 4.3,<br />ratingId: 3hjuhuh23uhu23} |
     | views                | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
@@ -163,8 +163,8 @@
   - *Header:*
 	
 	  | Field        | Type   | Require | Note                 |
-      | ------------ | ------ | ------- | -------------------- |
-      | access-token | String | Require | Token của người dùng |
+    | ------------ | ------ | ------- | -------------------- |
+    | access-token | String | Require | Token của người dùng |
   
 - **Response**:
 
@@ -190,7 +190,7 @@
     | supportedResolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
     | dateReleased         | Date         | Option | Ngày phát hành                                               |
     | dateUpdated          | Date         | Option | Ngày cập nhật phim<br />**Default value**: Date.now()        |
-    | category             | Array        | Option | Mảng id các category                                         |
+    | category             | Array        | Option | Mảng các category (danh mục) mà phim này thuộc<br />Ví dụ: ["Phim chiếu rạp", "Phim đề cử", "Phim sắp chiếu"] |
     | country | String | Option | Quốc gia |
     | time                 | Number       | Option | Thời lượng                                                   |
     | episodeNumber        | Number       | Option | Số tập phim, nếu là phim lẻ thì có giá trị 1                 |
@@ -268,6 +268,61 @@
     | Field | Type   | Require | Note                                                         |
     | ----- | ------ | ------- | ------------------------------------------------------------ |
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+
+## 1.11. Lọc phim
+
+- **Request:**
+  
+  - *Method:* GET
+  - *Path:* api/films/filter?arrange=&category=&country=&type=&year=
+  - *Params*:
+  
+  | Field    | Type   | Require | Note                                                         |
+  | -------- | ------ | ------- | ------------------------------------------------------------ |
+  | arrange  | Number | Option  | Sắp xếp kết quả tìm kiếm theo:<br />0: Mới cập nhật<br />1: Năm xuất bản<br />2: Tên phim<br />3: IMBd |
+  | category | String | Option  | Lọc theo danh mục                                            |
+  | country  | String | Option  | Lọc theo quốc gia                                            |
+  | type     | String | Option  | Lọc theo thể loại                                            |
+  | year     | Number | Option  | Lọc theo năm phát hành                                       |
+
+
+  - *Body:* JSON
+
+| Field | Type  | Require | Note               |
+| ----- | ----- | ------- | ------------------ |
+| links | Array | Require | Mảng các link phim |
+
+- **Response**:
+
+    | Field | Type   | Require | Note                                                         |
+    | ----- | ------ | ------- | ------------------------------------------------------------ |
+    | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+    | flims | Array  | Require | Mảng phim trả về                                             |
+
+## 1.12. Tìm kiếm phim theo tag
+- **Request:**
+  
+  - *Method:* GET
+  - *Path:* api/films/tag?tag=
+  - *Params*:
+  
+  | Field | Type   | Require | Note          |
+  | ----- | ------ | ------- | ------------- |
+  | tags  | String | Require | Lọc  theo tag |
+  
+  - *Body:* JSON
+  
+  | Field | Type  | Require | Note               |
+  | ----- | ----- | ------- | ------------------ |
+  | links | Array | Require | Mảng các link phim |
+  
+- **Response**:
+
+    | Field | Type   | Require | Note                                                         |
+    | ----- | ------ | ------- | ------------------------------------------------------------ |
+    | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+    | flims | Array  | Require | Mảng phim trả về                                             |
+
 
 # 2. User
 
