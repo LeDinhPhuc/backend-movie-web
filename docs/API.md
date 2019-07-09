@@ -136,28 +136,28 @@
   - *Path:* api/films
   - *Body*: JSON
   
-| Field | Type   | Require | Note              |
-| ----- | ------ | ------- | ----------------- |
-	| title                | Object       | Require  | Tiêu đề phim<br />Ví dụ:<br />{title_en: "Catain America"<br />title_vn: "Đội trưởng Mỹ"} |
-| supported_resolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
-| dateReleased         | Date         | Option | Ngày phát hành                                               |
-| dateCreated          | Date         | Option | Ngày tạo<br />**Default value**: Date.now()                  |
-| dateUpdated          | Date         | Option | Ngày cập nhật phim<br />**Default value**: Date.now()        |
-| category             | Array        | Require  | Mảng id các category                                         |
-| time                 | Number       | Option | Thời lượng                                                   |
-| episodeNumber        | Number       | Require  | Số tập phim, nếu là phim lẻ thì có giá trị 1                 |
-| imdb                 | Number       | Option | Số imdb của phim                                             |
-| scripts              | Array        | Require  | Người viết kịch bản                                          |
-| directors            | Array        | Require  | Đạo diễn                                                     |
-| characters           | Array        | Require  | Diễn viên                                                    |
-| content              | String       | Require  | Tóm tắt nội dung phim                                        |
-| image                | String       | Require  | Link ảnh lớn hiển thị khi xem chi tiết phim                  |
-| thumb                | String       | Require  | Link ảnh nhỏ khi hiển thị danh sách các phim                 |
-| type                 | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
-| links                | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
-| rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating |
-| views                | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
-  
+    | Field | Type   | Require | Note              |
+    | ----- | ------ | ------- | ----------------- |
+    | title                | Object       | Require  | Tiêu đề phim<br />Ví dụ:<br />{title_en: "Catain America"<br />title_vn: "Đội trưởng Mỹ"} |
+    | supported_resolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
+    | dateReleased         | Date         | Option | Ngày phát hành                                               |
+    | dateCreated          | Date         | Option | Ngày tạo<br />**Default value**: Date.now()                  |
+    | dateUpdated          | Date         | Option | Ngày cập nhật phim<br />**Default value**: Date.now()        |
+    | category             | Array        | Require  | Mảng id các category                                         |
+    | time                 | Number       | Option | Thời lượng                                                   |
+    | episodeNumber        | Number       | Require  | Số tập phim, nếu là phim lẻ thì có giá trị 1                 |
+    | imdb                 | Number       | Option | Số imdb của phim                                             |
+    | scripts              | Array        | Require  | Người viết kịch bản                                          |
+    | directors            | Array        | Require  | Đạo diễn                                                     |
+    | characters           | Array        | Require  | Diễn viên                                                    |
+    | content              | String       | Require  | Tóm tắt nội dung phim                                        |
+    | image                | String       | Require  | Link ảnh lớn hiển thị khi xem chi tiết phim                  |
+    | thumb                | String       | Require  | Link ảnh nhỏ khi hiển thị danh sách các phim                 |
+    | type                 | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
+    | links                | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
+    | rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating |
+    | views                | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
+
   - *Header:*
   
     | Field        | Type   | Require | Note                 |
