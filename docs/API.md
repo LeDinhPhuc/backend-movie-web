@@ -129,7 +129,7 @@
 
 
 
-## 1.6. Thêm một phim mới
+## 1.7. Thêm một phim mới
 
 - **Request:**
   - *Method:* POST
@@ -170,21 +170,21 @@
     |----|----|----|----|
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 
-## 1.7. Sửa thông tin một bộ phim 
+## 1.8. Sửa thông tin một bộ phim 
 - **Request:**
   - *Method:* PATCH
   - *Path:* api/films?id=x
   - *Param*:
 
-  | Field | Type   | Require | Note                      |
-  | ----- | ------ | ------- | ------------------------- |
-  | id    | String | Require | ID phim cần sửa thông tin |
-  
-  
-	- *Body*: JSON
-  
-  | Field | Type   | Require | Note              |
-  | ----- | ------ | ------- | ----------------- |
+| Field | Type   | Require | Note                      |
+| ----- | ------ | ------- | ------------------------- |
+| id    | String | Require | ID phim cần sửa thông tin |
+
+
+- *Body*: JSON
+
+| Field | Type   | Require | Note              |
+| ----- | ------ | ------- | ----------------- |
 | title                | Object       | Require  | Tiêu đề phim<br />Ví dụ:<br />{title_en: "Catain America"<br />title_vn: "Đội trưởng Mỹ"} |
 | supported_resolution | Array        | Option | Mảng các độ phân giải hỗ trợ của phim                        |
 | dateReleased         | Date         | Option | Ngày phát hành                                               |
@@ -200,23 +200,24 @@
 | content              | String       | Require  | Tóm tắt nội dung phim                                        |
 | image                | String       | Require  | Link ảnh lớn hiển thị khi xem chi tiết phim                  |
 | thumb                | String       | Require  | Link ảnh nhỏ khi hiển thị danh sách các phim                 |
-  | type                 | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
-  | links                | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
-  | rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating |
-  | views                | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
-	
+| type                 | Number       | Require  | Loại phim<br />0: phim lẻ<br />1: phim bộ                    |
+| links                | Array        | Require  | Link phim<br />- Nếu là phim lẻ thì length = 1<br />- Nếu là phim bộ thì length > 1 |
+| rating               | Object     | Require  | Đối tượng lưu trữ mức đánh giá hiện tại của phim và id map sang collection rating |
+| views                | Number       | Require  | Số lượt xem hiện tại của phim (theo ngày)<br />**Default value**: views = 0 |
+
 	- *Header:*
-  
-  | Field        | Type   | Require | Note                 |
-  | ------------ | ------ | ------- | -------------------- |
-  | access-token | String | Require | Token của người dùng |
-  
+
+| Field        | Type   | Require | Note                 |
+| ------------ | ------ | ------- | -------------------- |
+| access-token | String | Require | Token của người dùng |
+
 - **Response**:
+
     | Field | Type | Require | Note |
     |----|----|----|----|
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 
-## 1.8. Xóa phim
+## 1.9. Xóa phim
 
 - **Request:**
   
@@ -231,13 +232,14 @@
   - *Header:*
   
   | Field        | Type   | Require | Note                 |
-	| ------------ | ------ | ------- | -------------------- |
-| access-token | String | Option  | Token của người dùng |
+  | ------------ | ------ | ------- | -------------------- |
+  | access-token | String | Option  | Token của người dùng |
   
 - **Response**:
-    | Field | Type   | Require | Note                                                         |
-    | ----- | ------ | ------- | ------------------------------------------------------------ |
-    | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+  
+  | Field | Type   | Require | Note                                                         |
+  | ----- | ------ | ------- | ------------------------------------------------------------ |
+  | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 
 
 # 2. User
@@ -255,6 +257,7 @@
 | password | String | Require | Mật khẩu             |
 
 - **Response:**
+
 | Field | Type | Require | Note |
 |----|----|----|----|
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
@@ -272,6 +275,7 @@
 | password | String | Require | Mật khẩu             |
 
 - **Response:**
+
 | Field | Type | Require | Note |
 |----|----|----|----|
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
@@ -332,6 +336,7 @@
   | password | String | Require | Mật khẩu             |
 
 - **Response:**
+
     | Field | Type   | Require | Note                                                         |
     | ----- | ------ | ------- | ------------------------------------------------------------ |
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
