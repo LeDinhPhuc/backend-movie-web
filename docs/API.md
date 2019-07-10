@@ -365,7 +365,7 @@
 | Field | Type | Require | Note |
 |----|----|----|----|
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
-| accessToken | String | Require | Token của người dùng |
+| accessToken | String | Option | Token của người dùng |
 
 ## 2.3. Đăng xuất
 - **Request:**
@@ -400,7 +400,7 @@
 
 | Field | Type | Require | Note |
 |----|----|----|----|
-| error | Object | true | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+| error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 | user | Object | **Option** | Trả về thông tin tài khoản của người dùng |
 
 ## 2.5. Sửa thông tin cá nhân
@@ -416,10 +416,10 @@
   
   - *Body:* JSON
 
-  | Field    | Type   | Require | Note                 |
-  | -------- | ------ | ------- | -------------------- |
-  | email    | String | Require | Email của người dùng |
-  | password | String | Require | Mật khẩu             |
+  | Field    | Type   | Require | Note               |
+  | -------- | ------ | ------- | ------------------ |
+  | name     | String | Option  | Tên của người dùng |
+  | password | String | Option  | Mật khẩu           |
 
 - **Response:**
 
@@ -512,6 +512,24 @@
 | Field | Type   | Require | Note                                                         |
 | ----- | ------ | ------- | ------------------------------------------------------------ |
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+
+## 2.10. Lấy tất cả phim đã xem
+- **Request:**
+  - *Method:* GET
+  - *Path:* api/films/watchFilms
+  - *Header*:
+
+| Field        | Type   | Require | Note             |
+| ------------ | ------ | ------- | ---------------- |
+| access-token | String | Option  | Token người dùng |
+
+- **Response:**
+
+| Field        | Type   | Require | Note                                                         |
+| ------------ | ------ | ------- | ------------------------------------------------------------ |
+| error        | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+| watchedFilms | Array  | Option  | Mảng các phim đã xem                                         |
+
 
 
 # 3. Category
