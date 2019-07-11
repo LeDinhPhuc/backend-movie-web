@@ -446,7 +446,7 @@
 | Field | Type | Require | Note |
 |----|----|----|----|
 | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
-| user | Object | **Option** | Trả về thông tin tài khoản của người dùng |
+| user | Object | **Option** | Trả về thông tin tài khoản của người dùng (không trả về mật khẩu) |
 
 ## 2.5. Sửa thông tin cá nhân
 

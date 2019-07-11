@@ -33,6 +33,7 @@
 | _id            | String       | Require  | id của người dùng                                            |
 | email          | String       | Require  | Email của người dùng                                         |
 | name           | String       | Require  | Tên người dùng                                               |
+| password       | String       | Require  | Mật khẩu                                                     |
 | accType        | Number       | Require  | Loại tài khoản<br />0: Quản trị viên<br />1: Tài khoản thường<br />2: Tài khoản VIP |
 | dateRegistered | Date         | Require  | Ngày đăng ký tài khoản<br />**Default value**: Date.now()    |
 | watchedFilms   | ObjectId     | Require  | id map sang colection watched_films                          |
