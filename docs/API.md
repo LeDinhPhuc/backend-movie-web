@@ -340,6 +340,7 @@
 | email    | String | Require | Email của người dùng |
 | name     | String | Require | Tên người dùng       |
 | password | String | Require | Mật khẩu             |
+| accType  | Number | Require | Loại tài khoản       |
 
 - **Response:**
 
