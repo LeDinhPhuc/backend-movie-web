@@ -79,7 +79,7 @@ Ví dụ:
 | ------------ | ------------ | -------- | ------------------------------------------------------------ |
 | _id          | String       | Require  | id của rating                                                |
 | ratingNumber | Number       | Require  | Số rate hiện tại của phim                                    |
-| filmId       | String       | Require  | id map sang collection film                                  |
+| filmId       | ObjectId     | Require  | id map sang collection film                                  |
 | rate         | Array        | Require  | Mảng các  Object, mỗi object có id của người đánh giá và số rate mà họ đánh<br />Ví dụ: [{<br />id_user: hh2uiuy2iuiu2ui2uiu2<br />rate: 3 }] |
 
 # 6. slider
