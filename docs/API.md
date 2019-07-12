@@ -484,7 +484,13 @@
 | error        | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 | watchedFilms | Array  | Option  | Mảng các phim đã xem                                         |
 
+Mảng watchedFilms là một mảng các Object:
 
+[{id: id của phim
+title: tiêu đề phim
+episodeNumber: số tập phim
+episodeNumberCurrent: số tập phim đã chiếu = links.length
+thumb: ảnh nhỏ khi hiển thị phim}]
 
 # 3. Category
 
