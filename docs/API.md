@@ -333,6 +333,12 @@
 - **Request:**
   - *Method:* POST
   - *Path:* api/users/register
+  - - *Header:* 
+
+| Field        | Type   | Require | Note                 |
+| ------------ | ------ | ------- | -------------------- |
+| access-token | String | Option  | Token của người dùng |
+
   - *Body:* JSON
 
 | Field    | Type   | Require | Note                 |
