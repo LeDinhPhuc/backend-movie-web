@@ -326,52 +326,6 @@
     | ----- | ------ | ------- | ------------------------------------------------------------ |
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
     | flims | Array  | Require | Mảng phim trả về                                             |
-## 1.13. Đánh giá phim
-
-- **Request:**
-  - *Method:* POST
-  - *Path:* api/films/rate?id=x
-  - *Header*:
-
-  | Field        | Type   | Require | Note             |
-  | ------------ | ------ | ------- | ---------------- |
-  | access-token | String | Option  | Token người dùng |
-  
-  - *Body:* JSON
-
-  | Field | Type   | Require | Note             |
-  | ----- | ------ | ------- | ---------------- |
-  | rate  | Number | Require | Số điểm đánh giá |
-
-- **Response:**
-
-    | Field | Type   | Require | Note                                                         |
-    | ----- | ------ | ------- | ------------------------------------------------------------ |
-    | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
-
-## 1.14. Sửa đánh giá phim
-- **Request:**
-  - *Method:* PATCH
-  - *Path:* api/films/rate?id=x
-  - *Header*:
-
-| Field        | Type   | Require | Note             |
-| ------------ | ------ | ------- | ---------------- |
-| access-token | String | Option  | Token người dùng |
-
-
-- *Body:* JSON
-
-| Field | Type   | Require | Note             |
-| ----- | ------ | ------- | ---------------- |
-| rate  | Number | Require | Số điểm đánh giá |
-
-- **Response:**
-
-| Field | Type   | Require | Note                                                         |
-| ----- | ------ | ------- | ------------------------------------------------------------ |
-| error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
-
 
 # 2. User
 
@@ -840,4 +794,51 @@
     | Field | Type   | Require | Note                                                         |
     | ----- | ------ | ------- | ------------------------------------------------------------ |
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+
+# 6. Rate
+## 6.1. Đánh giá phim
+
+- **Request:**
+  - *Method:* POST
+  - *Path:* api/rate?filmId=x
+  - *Header*:
+
+  | Field        | Type   | Require | Note             |
+  | ------------ | ------ | ------- | ---------------- |
+  | access-token | String | Option  | Token người dùng |
+  
+  - *Body:* JSON
+
+  | Field | Type   | Require | Note             |
+  | ----- | ------ | ------- | ---------------- |
+  | rate  | Number | Require | Số điểm đánh giá |
+
+- **Response:**
+
+    | Field | Type   | Require | Note                                                         |
+    | ----- | ------ | ------- | ------------------------------------------------------------ |
+    | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
+
+## 6.2. Sửa đánh giá phim
+- **Request:**
+  - *Method:* PATCH
+  - *Path:* api/rate?filmId=x
+  - *Header*:
+
+| Field        | Type   | Require | Note             |
+| ------------ | ------ | ------- | ---------------- |
+| access-token | String | Option  | Token người dùng |
+
+
+- *Body:* JSON
+
+| Field | Type   | Require | Note             |
+| ----- | ------ | ------- | ---------------- |
+| rate  | Number | Require | Số điểm đánh giá |
+
+- **Response:**
+
+| Field | Type   | Require | Note                                                         |
+| ----- | ------ | ------- | ------------------------------------------------------------ |
+| error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 
