@@ -290,7 +290,7 @@
   | Field    | Type   | Require | Note                                                         |
   | -------- | ------ | ------- | ------------------------------------------------------------ |
   | category | String | Option  | Lọc theo danh mục                                            |
-  | arrange  | Number | Option  | Sắp xếp kết quả tìm kiếm theo:<br />0: Mới cập nhật<br />1: Năm xuất bản<br />2: Tên phim<br />3: IMBd |
+  | arrange  | Number | Option  | Sắp xếp kết quả tìm kiếm theo:<br />0: Mới cập nhật<br />1: Năm xuất bản<br />2: Tên phim<br />3: IMBd<br />4. Views nhiều nhất |
   | country  | String | Option  | Lọc theo quốc gia                                            |
   | type     | String | Option  | Lọc theo thể loại                                            |
   | year     | Number | Option  | Lọc theo năm phát hành                                       |
