@@ -506,11 +506,6 @@ thumb: ảnh nhỏ khi hiển thị phim}]
 - **Request:**
   - *Method:* GET
   - *Path:* api/categories
-  - *Header:*
-
-| Field        | Type   | Require | Note             |
-| ------------ | ------ | ------- | ---------------- |
-| access-token | String | Option  | Token người dùng |
 
 - **Response:**
 
