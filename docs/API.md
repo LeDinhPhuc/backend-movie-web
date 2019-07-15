@@ -531,7 +531,7 @@ thumb: ảnh nhỏ khi hiển thị phim}]
   | Field  | Type   | Require | Note                    |
   | ------ | ------ | ------- | ----------------------- |
   | key    | String | Require | Tên category            |
-  | values | Array  | Require | Mảng các categories con |
+  | values | Array  | Option  | Mảng các categories con |
   
 - **Response:**
 
@@ -735,7 +735,7 @@ thumb: ảnh nhỏ khi hiển thị phim}]
   | Field  | Type   | Require | Note   |
   | ------ | ------ | ------- | ------ |
   | key    | String | Require | Key    |
-  | values | String | Option  | Values |
+  | values | String | Require | Values |
   
 - *Header:*
   
