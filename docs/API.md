@@ -735,7 +735,7 @@ thumb: ảnh nhỏ khi hiển thị phim}]
   | Field  | Type   | Require | Note   |
   | ------ | ------ | ------- | ------ |
   | key    | String | Require | Key    |
-  | values | String | Require | Values |
+  | values | String | Option  | Values |
   
 - *Header:*
   
