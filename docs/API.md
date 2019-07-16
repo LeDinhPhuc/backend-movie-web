@@ -592,12 +592,12 @@ thumb: ảnh nhỏ khi hiển thị phim}]
     | ----- | ------ | ------- | ------------------------------------------------------------ |
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 
-# 4. Slider
+# 4. Banner
 
-## 4.1. Lấy tất cả slider
+## 4.1. Lấy tất cả banner
 - **Request:**
   - *Method:* GET
-  - *Path:* /api/sliders
+  - *Path:* /api/banners
 - **Response:**
 
 | Field   | Type   | Require | Note                                                         |
@@ -605,10 +605,10 @@ thumb: ảnh nhỏ khi hiển thị phim}]
 | error   | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 | sliders | Array  | Require | Mảng các object chứa sliders                                 |
 
-## 4.2. Thêm một slider
+## 4.2. Thêm một banner
 - **Request:**
   - *Method:* POST
-  - *Path:* api/sliders
+  - *Path:* api/banners
   - *Header*:
   
   | Field        | Type   | Require | Note             |
@@ -628,11 +628,11 @@ thumb: ảnh nhỏ khi hiển thị phim}]
     | ----- | ------ | ------- | ------------------------------------------------------------ |
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 
-## 4.3. Sửa một slider
+## 4.3. Sửa một banner
 
 - **Request:**
   - *Method:* PATCH
-  - *Path:* api/sliders/id=?
+  - *Path:* api/banners/id=?
   - *Header*:
   
   | Field        | Type   | Require | Note             |
@@ -658,10 +658,10 @@ thumb: ảnh nhỏ khi hiển thị phim}]
     | ----- | ------ | ------- | ------------------------------------------------------------ |
     | error | Object | Require | Object chứa:<br />isError: true là có lỗi, false là không có lỗi<br />errorMessage: thông tin lỗi |
 
-## 4.4. Xóa slider
+## 4.4. Xóa banner
 - **Request:**
   - *Method:* DELETE
-  - *Path:* api/sliders?id=x
+  - *Path:* api/banners?id=x
   - *Header*:
   
   | Field        | Type   | Require | Note             |
